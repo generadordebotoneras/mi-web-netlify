@@ -2,12 +2,53 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi Web en Netlify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfumería London</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <h1>Hola desde Netlify 🚀</h1>
-  <p>Edita este sitio en VS Code y despliega los cambios automáticamente.</p>
-  <script src="script.js"></script>
+  <header class="navbar">
+    <h1>Perfumería London</h1>
+    <nav>
+      <button onclick="scrollToSection('catalogo')">Catálogo</button>
+      <button onclick="scrollToSection('ubicacion')">Ubicación</button>
+    </nav>
+  </header>
+
+  <section class="carousel" id="catalogo">
+    <h2>🌸 Fragancias destacadas</h2>
+    <div class="carousel-container">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/150" alt="Perfume 1">
+        <h3>London Rose</h3>
+        <p>Notas de rosa y vainilla</p>
+        <button onclick="addToCart('London Rose')">Agregar al carrito</button>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/150" alt="Perfume 2">
+        <h3>Classic Oud</h3>
+        <p>Amaderado con ámbar</p>
+        <button onclick="addToCart('Classic Oud')">Agregar al carrito</button>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/150" alt="Perfume 3">
+        <h3>Blue Velvet</h3>
+        <p>Fresco con lavanda</p>
+        <button onclick="addToCart('Blue Velvet')">Agregar al carrito</button>
+      </div>
+    </div>
+  </section>
+
+  <footer id="ubicacion">
+    <h3>Encuéntranos aquí</h3>
+    <iframe src="https://maps.google.com/maps?q=London%20UK&t=&z=13&ie=UTF8&iwloc=&output=embed"
+      width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </footer>
+
+  <a href="https://wa.me/573001112233?text=¡Hola!%20Quiero%20más%20información%20sobre%20las%20fragancias."
+     class="whatsapp-float" target="_blank">
+    💬 Comunícate ya
+  </a>
 </body>
-</html> 
+</html>
